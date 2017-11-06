@@ -3,7 +3,7 @@ font: bold 12px Verdana;
 background: transparent; /*background of menu bar (default state)*/
 width: 100%;
 display: none;
-margin: 15px 0px 0px 0px
+margin: 0px 0px 0px 0px
 }
 
 .ddsmoothmenu ul{
@@ -25,13 +25,13 @@ margin-left: 0;
 .ddsmoothmenu ul li a{
     display: block;
     background: transparent;
-    padding: 0px 20px;
-    border-right: 1px dashed #7c7c7c;
-    color: #333333;
+    padding: 14px 15px;
+    border-right: solid 1px #00c15e;
+    color: #ffffff;
     text-decoration: none;
     text-transform: uppercase;
     font-family: 'baomoi';
-    font-size: 15px;
+    font-size: 12px;
 }
 .ddsmoothmenu ul > li{
   background: transparent;
@@ -50,7 +50,7 @@ color:#F86B47;
 
 .ddsmoothmenu ul li a:hover{
 background: transparent; /*background of menu items during onmouseover (hover state)*/
-color: #3AB54A;
+color:#F86B47;
 }
 	
 /* sub menus */
@@ -59,9 +59,9 @@ position: absolute;
 left: -3000px;
 display: none; /*collapse all sub menus to begin with*/
 visibility: hidden;
-background: #ffffff;
+background: #00a651;
 width: 200px !important;
-top: 40px !important;
+top: 43px !important;
 }
 
 /*Sub level menu list items (alters style from Top level List Items)*/
@@ -72,25 +72,29 @@ float: none;
 
 /*All subsequent sub menu levels vertical offset after 1st level sub menu */
 .ddsmoothmenu ul li ul li ul{
-top: 0;
+top: 0 !important;
 }
 
+.ddsmoothmenu ul li ul li a:hover{
+  background: #00d769
+}
 /* Sub level menu links style */
 .ddsmoothmenu ul li ul li a{
-        font-size: 15px;
+        font-size: 12px;
     width: 100%;
     padding: 10px 0px 10px 10px;
     margin: 0;
-    border-bottom: 1px solid #dddddd;
+    border-bottom:solid 1px #00c15e;
     font-family: 'robotocondensed';
     display: block;
-    border-left: 1px solid #dddddd;
-    border-right: 1px solid #dddddd;
+    border-left: solid 1px #00c15e;
+    border-right: solid 1px #00c15e;
     text-transform: capitalize;
     font-weight: normal;
 }
 .ddsmoothmenu > ul > li.current-menu-item > a{
-  color:#3AB54A;
+  color:#353434;
+  background: #ffffff
 }
 .ddsmoothmenu > ul > li > ul > li.current-menu-item > a{
   color: #3AB54A;

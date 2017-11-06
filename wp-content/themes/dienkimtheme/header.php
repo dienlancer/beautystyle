@@ -114,47 +114,76 @@ foreach($arrCart as $cart){
                     <img src="<?php echo $customizerGlobal->general_section('site-logo');?>" />
                 </a></center>
             </div>
-            <div class="col-lg-6 no-padding">                
-                <div id="smoothmainmenu" class="ddsmoothmenu">
-                    <?php     
-                    $args = array( 
-                        'menu'              => '', 
-                        'container'         => '', 
-                        'container_class'   => '', 
-                        'container_id'      => '', 
-                        'menu_class'        => 'mainmenu', 
-                        'menu_id'           => 'main-menu', 
-                        'echo'              => true, 
-                        'fallback_cb'       => 'wp_page_menu', 
-                        'before'            => '', 
-                        'after'             => '', 
-                        'link_before'       => '', 
-                        'link_after'        => '', 
-                        'items_wrap'        => '<ul id="%1$s" class="%2$s">%3$s</ul>',  
-                        'depth'             => 3, 
-                        'walker'            => '', 
-                        'theme_location'    => 'main-menu' 
-                    );
-                    wp_nav_menu($args);
-                    ?>                
-                </div>                
+            <div class="col-lg-6 no-padding">                                      
+                <div class="box-search">
+                    <form action="<?php echo $search_link; ?>" method="get">
+                        <input type="text" name="q" autocomplete="off" placeholder="Điện thoại, Ipad, Samsung, Iphone..." value="">
+                        <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                    </form>
+                    <div class="clr"></div>
+                </div>
+                <div class="clr"></div>
+                <div class="goi-y-tu-khoa"><span><font color="#00a651">Gợi ý từ khóa:</font></span> Thời trang nam, Thời trang nữ, Balo, túi xách, Mè và bé...</div>
             </div>
             <div class="col-lg-3 no-padding">
-                <div class="desktop-box-search">                    
-                    <div class="box-search">
-                        <form action="<?php echo $search_link; ?>" method="get">
-                            <input type="text" name="q" autocomplete="off" placeholder="Tìm kiếm sản phẩm" value="">
-                            <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
-                        </form>
-                        <div class="clr"></div>
+                <div class="col-md-6">
+                    <div class="box">
+                        <div class="icon">
+                            <i class="fa fa-user" aria-hidden="true"></i>
+                        </div>
+                        <div class="text">
+
+                            <span>Tài khoản</span>
+
+                            <span class="sub">Đơn hàng</span>
+                        </div>
                     </div>
-                    <div class="clr"></div>
-                </div>       
+                </div>
+                <div class="col-md-6">
+                    <div class="box">
+                        <div class="icon">
+                            <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                        </div>
+                        <div class="text">
+                            <span><a href="<?php echo $cart_link; ?>">Giỏ hàng (<?php echo $quantity; ?>)</a></span>
+                            <span class="sub">0đ</span>
+                        </div>
+                    </div>
+                </div>
             </div>      
             <div class="clr"></div>      
         </div>      
     </div>    
 </div>   
+<div class="main-menu-wrapper">
+        <div class="container">
+            <div id="smoothmainmenu" class="ddsmoothmenu">
+                <?php     
+                $args = array( 
+                    'menu'              => '', 
+                    'container'         => '', 
+                    'container_class'   => '', 
+                    'container_id'      => '', 
+                    'menu_class'        => 'mainmenu', 
+                    'menu_id'           => 'main-menu', 
+                    'echo'              => true, 
+                    'fallback_cb'       => 'wp_page_menu', 
+                    'before'            => '', 
+                    'after'             => '', 
+                    'link_before'       => '', 
+                    'link_after'        => '', 
+                    'items_wrap'        => '<ul id="%1$s" class="%2$s">%3$s</ul>',  
+                    'depth'             => 3, 
+                    'walker'            => '', 
+                    'theme_location'    => 'main-menu' 
+                );
+                wp_nav_menu($args);
+                ?>   
+                <div class="clr"></div>
+            </div>   
+            <div class="clr"></div>             
+        </div>        
+    </div>
 <div class="mobilemenu">
     <div class="container">
         <div>
@@ -196,16 +225,6 @@ foreach($arrCart as $cart){
         </div>
     </div>
 </div>
-<!--<div class="mobile-search">                    
-                    <div class="box-search">
-                        <form action="<?php echo $search_link; ?>" method="get">
-                            <input type="text" name="q" autocomplete="off" placeholder="Tìm kiếm sản phẩm" value="">
-                            <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
-                        </form>
-                        <div class="clr"></div>
-                    </div>
-                    <div class="clr"></div>
-                </div>   -->
 </header>
 
 

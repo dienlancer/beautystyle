@@ -21,69 +21,72 @@ $pinterest_url=$zendvn_sp_settings['pinterest_url'];
      ?>
      <?php get_header();     ?>
      <div class="container">
-        <div class="margin-top-5">            
+        <div class="col-lg-8 no-padding">
             <?php if(is_active_sidebar('slideshow-widget')):?>
                 <?php dynamic_sidebar('slideshow-widget')?>
             <?php endif; ?>              
         </div>
+        <div class="col-lg-4 no-padding">
+            <img src="<?php echo site_url( '/wp-content/uploads/banner_right_1.jpg', null ); ?>" />
+            <img src="<?php echo site_url( '/wp-content/uploads/banner_right_2.jpg', null ); ?>" />
+        </div>                    
     </div>
-    <?php if(is_active_sidebar('tu-van-widget')):?>
-        <?php dynamic_sidebar('tu-van-widget')?>
-    <?php endif; ?>    
-    <div class="container main">
+    <div class="container">
+        <div class="col-lg-6 no-padding"><center><figure><img src="<?php echo site_url( '/wp-content/uploads/banner_home_1.jpg',null ); ?>" /></figure></center></div>
+        <div class="col-lg-6 no-padding"><center><figure><img src="<?php echo site_url( '/wp-content/uploads/banner_home_2.jpg',null ); ?>" /></figure></center></div>
+    </div>    
+    <div class="container main margin-top-15">        
         <div class="header-title">
-            <h4><span><font color="#3AB54A">Danh mục</font></span> sản phẩm</h4>               
-        </div>        
-        <div class="margin-top-15 product-kemma">            
-            <div>                
-                <div class="cate-product-horizontal-right">
-                    <?php     
-                    $args = array( 
-                        'menu'              => '', 
-                        'container'         => '', 
-                        'container_class'   => '', 
-                        'container_id'      => '', 
-                        'menu_class'        => 'cateprodhorizontalright', 
-                        'menu_id'           => 'cate-prod-horizontal-right', 
-                        'echo'              => true, 
-                        'fallback_cb'       => 'wp_page_menu', 
-                        'before'            => '', 
-                        'link_before'       => '<i class="fa fa-angle-double-right" aria-hidden="true"></i>&nbsp;&nbsp;', 
-                        'after'             => '', 
-                        'link_after'        => '<i class="fa fa-caret-down pull-right" aria-hidden="true"></i>', 
-                        'items_wrap'        => '<ul id="%1$s" class="%2$s">%3$s</ul>',  
-                        'depth'             => 3, 
-                        'walker'            => '', 
-                        'theme_location'    => 'rau-sach-menu' 
-                    );
-                    wp_nav_menu($args);
-                    ?>    
-                    <div class="clr"></div>                                    
-                </div>
-                <div class="margin-top-15"><center><img  src="<?php echo site_url( '/wp-content/uploads/noi-that-sang-trong.jpg',null ); ?>" /></center></div>                
-            </div>
-            <div>                               
-                <?php if(is_active_sidebar('rau-sach-widget')):?>
-                    <?php dynamic_sidebar('rau-sach-widget')?>
-                <?php endif; ?>                    
-            </div>                    
-            <div class="clr"></div>   
+            <h2>
+                Top bán chạy trong tuần
+            </h2>   
+            <div class="clr"></div>          
         </div>  
-        <div class="header-title">
-            <h4><span><font color="#3AB54A">Thiết bị</font></span> vệ sinh</h4>                          
-        </div>  
+        <div class="clr"></div>
         <div class="margin-top-15">
             <?php if(is_active_sidebar('thiet-bi-ve-sinh-widget')):?>
                 <?php dynamic_sidebar('thiet-bi-ve-sinh-widget')?>
             <?php endif; ?>  
         </div>
-        <div class="header-title">
-            <h4><span><font color="#3AB54A">Thiết bị</font></span> bếp</h4>                          
-        </div>  
+        <div class="header-title margin-top-15">
+            <h2>
+                Điện thoại Tablet
+            </h2>             
+            <?php     
+                $args = array( 
+                    'menu'              => '', 
+                    'container'         => '', 
+                    'container_class'   => '', 
+                    'container_id'      => '', 
+                    'menu_class'        => 'dienthoaitabletmenu', 
+                    'menu_id'           => 'dien-thoai-tablet-menu', 
+                    'echo'              => true, 
+                    'fallback_cb'       => 'wp_page_menu', 
+                    'before'            => '', 
+                    'after'             => '', 
+                    'link_before'       => '', 
+                    'link_after'        => '', 
+                    'items_wrap'        => '<ul id="%1$s" class="%2$s">%3$s</ul>',  
+                    'depth'             => 3, 
+                    'walker'            => '', 
+                    'theme_location'    => 'dien-thoai-tablet-menu' 
+                );
+                wp_nav_menu($args);
+                ?>   
+                <div class="clr"></div>
+        </div>   
         <div class="margin-top-15">
-            <?php if(is_active_sidebar('thiet-bi-bep-widget')):?>
-                <?php dynamic_sidebar('thiet-bi-bep-widget')?>
-            <?php endif; ?>  
+            <div class="col-lg-8 no-padding">
+                <div><center><figure><img src="<?php echo site_url( '/wp-content/uploads/banner_product_home_tablet.jpg',null ); ?>" /></figure></center></div>
+                <?php if(is_active_sidebar('thiet-bi-bep-widget')):?>
+                    <?php dynamic_sidebar('thiet-bi-bep-widget')?>
+                <?php endif; ?>  
+            </div>
+            <div class="col-lg-4">
+                <?php if(is_active_sidebar('goi-y-mot-widget')):?>
+                    <?php dynamic_sidebar('goi-y-mot-widget')?>
+                <?php endif; ?>  
+            </div>            
         </div>
     </div>    
     <div class="register-mail-bg margin-top-15">

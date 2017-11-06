@@ -21,7 +21,7 @@ p{margin:1em 0;}
 img{max-width:100%;}
 .clr{clear:both;margin:0 !important;padding: 0 !important}
 a{color: #333;}
-a:hover,a:focus{text-decoration:none;color:#3AB54A;}
+a:hover,a:focus{text-decoration:none;color:#00a651;}
 ul{margin:0;padding:0;}
 ul li{margin-left:15px;}
 ol li{margin-left:15px;margin-bottom: 15px;}
@@ -86,7 +86,7 @@ table td{padding-left:10px;padding-bottom:10px;}
 .readmore{font-weight:bold;font-style:italic;color:#FC6500;float:right;}
 .readmore:hover{text-decoration:underline;}
 .fancybox-custom .fancybox-skin{box-shadow:0 0 50px #222;}
-.btn{background:#3AB54A;border-color:#3AB54A;}
+.btn{background:#00a651;border-color:#00a651;}
 figure{overflow:hidden;position:relative;display:inline-block;vertical-align:top;}
 figure img{-webkit-transition:all 0.5s linear;transition:all 0.5s linear;-webkit-transform:scale3d(1, 1, 1);transform:scale3d(1, 1, 1);}
 figure:hover img{-webkit-transform:scale3d(1.2, 1.2, 1);transform:scale3d(1.2, 1.2, 1);}
@@ -127,14 +127,14 @@ div.mobile-search{
     }
 }
 .navbar-default {    
-    background: #3AB54A;
+    background: #00a651;
     border: 0;
 }
 .navbar-default .navbar-toggle{
     border: 1px solid #ffffff
 }
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus{
-     background:#3AB54A;
+     background:#00a651;
 }
 .navbar-default .navbar-toggle .icon-bar {
     background-color: #fff;
@@ -203,7 +203,7 @@ div.topbar{
     padding: 38px 0px
 }
 div.bg-header{
-    background:#F6F6F6;    
+    background:#ffffff;    
     padding: 10px 0px
 }
 .box-search input {
@@ -217,7 +217,7 @@ div.bg-header{
     position: absolute;
     width: 45px;
     height: 40px;
-    background-color: #3AB54A;
+    background-color: #00a651;
     box-shadow: none;
     border: none;
     right: 0;
@@ -495,7 +495,7 @@ div.customer-comment{
 }
 .box-register-email button {
     position: absolute;
-    background-color: #3ab54a;
+    background-color: #00a651;
     box-shadow: none;
     border: none;
     right: 0;
@@ -504,7 +504,7 @@ div.customer-comment{
     padding: 8px 8px;
 }
 .tu-van-mien-phi{
-    color: #3AB54A
+    color: #00a651
 }
 .subscribe-label{
     
@@ -575,7 +575,7 @@ h3.page-title{
         text-transform: uppercase;
     font-weight: bold;
     font-size: 14px;
-    background: #3AB54A;
+    background: #00a651;
     color: #ffffff;
     padding: 15px 10px;
     
@@ -669,7 +669,7 @@ div.box-product-detail{
 }
 
 div.information-pane {
-    background: #3AB54A;
+    background: #00a651;
     float: left;
     color: #ffffff;
     padding: 5px 10px;
@@ -690,7 +690,7 @@ input.quantity{
 }
 input.add-to-cart {
     color: #fff;
-    background-color:#3AB54A;
+    background-color:#00a651;
     padding: 5px 10px 5px 10px;
     display: block;
     border: 0;
@@ -748,7 +748,7 @@ div.cart-top-user{
     float: right;
 }
 .box-cart {
-    background: #3ab54a;
+    background: #00a651;
     border-radius: 3px;
 }
 .box-cart > a {
@@ -769,7 +769,7 @@ div.cart-top-user{
 }
 ul#cart-sidebar {
     background: #fff;
-    border-top: 3px solid #3ab54a;
+    border-top: 3px solid #00a651;
     padding: 15px 20px;
     margin: 0;
 }
@@ -834,8 +834,8 @@ div.re-ship-phone{
 }
 div.header-title{
         font-family: 'baomoi';
-    border-bottom: 1px solid #e1e1e1;
     padding: 0px 0px 1px 0px;
+    background: #ffffff;
 }
 div.header-title > h4{
     border-bottom: 1px solid #e1e1e1;
@@ -933,7 +933,7 @@ div.hot-news-title > a{
     color: #ffffff
 }
 div.map{
-        background: #3ab54a;
+        background: #00a651;
     position: absolute;
     padding: 20px;
     top: 80px;
@@ -1048,6 +1048,87 @@ div.box-footer > div {
 div.warasocial{
     width: 166px;
     margin: auto;    
+}
+div.goi-y-tu-khoa{
+        position: relative;
+    margin-top: 50px;
+    font-style: italic;
+}
+div.box > div.icon {
+    background: #00a651;
+    border-radius: 50%;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+div.box > div {
+    display: inline-block;
+    vertical-align: middle;
+}
+div.box > div i {
+    font-size: 20px;
+    color: #fff;
+}
+div.box > div.text > span {
+    display: block;
+    font-size: 11px;
+    text-transform: uppercase;
+}
+div.box > div.text > span:last-child {
+    text-transform: none;
+    font-size: 13px;
+    font-style: italic;
+}
+.fa-user-o:before {
+    content: "\f2c0";
+}
+div.main-menu-wrapper {
+    background: #00a651;
+}
+.header-title h2 {
+    background: #00a651;
+    padding: 0 8px 0 12px;
+    height: 100%;
+    position: relative;
+    margin: 0;
+    -webkit-border-radius: 4px 0 0 4px;
+    -moz-border-radius: 4px 0 0 4px;
+    border-radius: 4px 0 0 4px;
+    color: #fff;
+    line-height: 45px;
+    font-size: 16px;
+    text-transform: uppercase;
+    float: left;
+}
+ul.dienthoaitabletmenu{
+    list-style: none;
+    float: left;
+}
+ul.dienthoaitabletmenu > li{
+    float: left;
+    margin-left: 0
+}
+ul.dienthoaitabletmenu > li > a{
+    display: block;
+    margin:14px 20px 13px 20px;
+} 
+.header-title h2:after {
+    content: " ";
+    display: block;
+    width: 0;
+    height: 0;
+    margin-left: 2px;
+    vertical-align: middle;
+    border-top: 22px solid transparent;
+    border-left: 15px solid;
+    border-left-color: #00a651;
+    border-right: 0 solid transparent;
+    border-bottom: 23px solid transparent;
+    position: absolute;
+    top: 0;
+    right: -15px;
 }
 @media (max-width: 1199px){
     div.phone-number > div{

@@ -24,7 +24,8 @@ function zendvn_theme_register_menus(){
 			'about-us-menu' 			=> __('Tại sao chọn chúng tôi'),		
 			'category-article-menu' => __('Danh mục bài viết'),	
 			'category-product-menu' => __('Danh mục sản phẩm'),			
-			'bottom-menu' => __('Bottom menu'),			
+			'bottom-menu' => __('Bottom menu'),		
+			'dien-thoai-tablet-menu' => __('DienThoaiTabletMenu'),			
 		)
 	);
 }
@@ -51,6 +52,15 @@ function zendvn_theme_widgets_init(){
 	register_sidebar(array(
 		'name'          => __( 'SearchWidget', $themeName ),
 		'id'            => 'search-widget',		
+		'class'         => '',
+		'before_widget' => '<div id="%1$s" class="%2$s">',
+		'before_title'  => '<h6>',
+		'after_title'   => '</h6>',
+		'after_widget'  => '</div>'				
+	));
+	register_sidebar(array(
+		'name'          => __( 'GoiYMotWidget', $themeName ),
+		'id'            => 'goi-y-mot-widget',		
 		'class'         => '',
 		'before_widget' => '<div id="%1$s" class="%2$s">',
 		'before_title'  => '<h6>',
