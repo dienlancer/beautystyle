@@ -25,7 +25,8 @@ function zendvn_theme_register_menus(){
 			'category-article-menu' => __('Danh mục bài viết'),	
 			'category-product-menu' => __('Danh mục sản phẩm'),			
 			'bottom-menu' => __('Bottom menu'),		
-			'dien-thoai-tablet-menu' => __('DienThoaiTabletMenu'),			
+			'dien-thoai-tablet-menu' => __('DienThoaiTabletMenu'),
+			'phu-kien-cong-nghe-menu' => __('PhuKienCongNgheMenu'),			
 		)
 	);
 }
@@ -61,6 +62,42 @@ function zendvn_theme_widgets_init(){
 	register_sidebar(array(
 		'name'          => __( 'GoiYMotWidget', $themeName ),
 		'id'            => 'goi-y-mot-widget',		
+		'class'         => '',
+		'before_widget' => '<div id="%1$s" class="%2$s">',
+		'before_title'  => '<h6>',
+		'after_title'   => '</h6>',
+		'after_widget'  => '</div>'				
+	));
+	register_sidebar(array(
+		'name'          => __( 'GoiYHaiWidget', $themeName ),
+		'id'            => 'goi-y-hai-widget',		
+		'class'         => '',
+		'before_widget' => '<div id="%1$s" class="%2$s">',
+		'before_title'  => '<h6>',
+		'after_title'   => '</h6>',
+		'after_widget'  => '</div>'				
+	));
+	register_sidebar(array(
+		'name'          => __( 'GoiYBaWidget', $themeName ),
+		'id'            => 'goi-y-ba-widget',		
+		'class'         => '',
+		'before_widget' => '<div id="%1$s" class="%2$s">',
+		'before_title'  => '<h6>',
+		'after_title'   => '</h6>',
+		'after_widget'  => '</div>'				
+	));
+	register_sidebar(array(
+		'name'          => __( 'GoiYBonWidget', $themeName ),
+		'id'            => 'goi-y-bon-widget',		
+		'class'         => '',
+		'before_widget' => '<div id="%1$s" class="%2$s">',
+		'before_title'  => '<h6>',
+		'after_title'   => '</h6>',
+		'after_widget'  => '</div>'				
+	));
+	register_sidebar(array(
+		'name'          => __( 'MeVaBeWidget', $themeName ),
+		'id'            => 'me-va-be-widget',		
 		'class'         => '',
 		'before_widget' => '<div id="%1$s" class="%2$s">',
 		'before_title'  => '<h6>',

@@ -21,40 +21,72 @@ if(!empty($instance['item_id'])){
 		if($instance["status"]=='active'){		
 			switch ($instance["position"]) {				
 				case "hot-news-widget":	
-				$args = array(
-					'post__in' => $arrItemID,
-					'post_type' => 'post'
-				);			 
-				$query = new WP_Query($args);		
-				if($query->have_posts()){
-					$k=1;
-                	$post_count=$query->post_count;
-					while ($query->have_posts()) {
-						$query->the_post();		
-						$post_id=$query->post->ID;							
-						$permalink=get_the_permalink($post_id);
-						$title=get_the_title($post_id);
-						$excerpt=get_post_meta($post_id,$post_meta_key."intro",true);
-						$featureImg=wp_get_attachment_url(get_post_thumbnail_id($post_id));		   
-						$featureImg=$vHtml->getFileName($featureImg);
-						$featureImg=site_url('/wp-content/uploads/'.$featureImg ,null );  
-						?>
-						<div class="col-lg-3">
-							<div class="relative">
-								<a href="<?php echo $permalink; ?>"><img src="<?php echo $featureImg; ?>" /></a>
-								<div class="hot-news-title">
-									
+				?>
+				<script type="text/javascript" language="javascript">
+					jQuery(document).ready(function(){
+						jQuery(".owl-carousel-hot-news").owlCarousel({
+							autoplay:false,                    
+							loop:true,
+							margin:10,                        
+							nav:true,                                            
+							responsiveClass:true,
+							responsive:{
+								0:{
+									items:1,
+									nav:true
+								},
+								600:{
+									items:1,
+									nav:false
+								},
+								1000:{
+									items:3,
+									nav:true,
+									loop:false
+								}
+							}
+						})
+					});                
+				</script>
+				<div class="owl-carousel owl-carousel-hot-news owl-theme">
+					<?php 
+					$args = array(
+						'post__in' => $arrItemID,
+						'post_type' => 'post'
+					);			 
+					$query = new WP_Query($args);		
+					if($query->have_posts()){
+						$k=1;
+						$post_count=$query->post_count;
+						while ($query->have_posts()) {
+							$query->the_post();		
+							$post_id=$query->post->ID;							
+							$permalink=get_the_permalink($post_id);
+							$title=get_the_title($post_id);
+							$excerpt=get_post_meta($post_id,$post_meta_key."intro",true);
+							$featureImg=wp_get_attachment_url(get_post_thumbnail_id($post_id));		   
+							$featureImg=$vHtml->getFileName($featureImg);
+							$featureImg=site_url('/wp-content/uploads/'.$featureImg ,null );  
+							?>
+							<div class="items">
+								<div class="relative">
+									<a href="<?php echo $permalink; ?>"><img src="<?php echo $featureImg; ?>" /></a>
+									<div class="hot-news-title margin-top-15">
+										<a href="<?php echo $permalink; ?>"><?php echo $title; ?></a>
+									</div>
+									<div class="hot-news-excerpt margin-top-5">
+										<?php echo $excerpt; ?>
+									</div>
+									<a class="readmore" href="<?php echo $permalink; ?>">Xem thêm</a>
 								</div>
-							</div>
-						</div>																	
-						<?php
-						if($k%4 ==0 || $k==$post_count){
-							echo '<div class="clr"></div>';
+							</div>																	
+							<?php							
 						}
-						$k++;
+						wp_reset_postdata();  
 					}
-					wp_reset_postdata();  
-				}
+					?>
+				</div>
+				<?php				
 				break;						
 				case "partner-widget":	
 				?>					
@@ -462,6 +494,9 @@ if(!empty($instance['item_id'])){
 			}			
 			break;	
 			case "thiet-bi-bep-widget":	
+			case "clever-house-widget":	
+			case "thiet-bi-ve-sinh-widget":
+			case "me-va-be-widget":
 			?>
 			<script type="text/javascript" language="javascript">
 				jQuery(document).ready(function(){
@@ -554,37 +589,10 @@ if(!empty($instance['item_id'])){
 			</div>
 			<?php
 			break;
-			case "thiet-bi-ve-sinh-widget":					
-			case "clever-house-widget":		
-			?>
-			<script type="text/javascript" language="javascript">
-				jQuery(document).ready(function(){
-					jQuery(".owl-carousel-equipment").owlCarousel({
-						autoplay:false,                    
-						loop:true,
-						margin:10,                        
-						nav:true,                                            
-						responsiveClass:true,
-						responsive:{
-							0:{
-								items:1,
-								nav:true
-							},
-							600:{
-								items:1,
-								nav:false
-							},
-							1000:{
-								items:6,
-								nav:true,
-								loop:false
-							}
-						}
-					})
-				});                
-			</script>
-			<div class="owl-carousel owl-carousel-equipment owl-theme">
-			<?php			
+			case 'goi-y-mot-widget':
+			case 'goi-y-hai-widget':
+			case 'goi-y-ba-widget':
+			case 'goi-y-bon-widget':
 			$args = array(
 				'post__in' => $arrItemID,
 				'post_type' => 'zaproduct'
@@ -619,35 +627,18 @@ if(!empty($instance['item_id'])){
 					$str_price=$regular_price . '&nbsp;&nbsp;' . $sale_price_des ;
 					?>
 					<div>
-						<div class="box-product">
-							<div class="product-img"><center><figure><a href="<?php echo $permalink; ?>"><img src="<?php echo $featureImg; ?>" alt="" /></a></figure></center>
-								<div class="box-product-add-to-cart">
-									<div class="them-vao-gio-hang">
-									<a href="javascript:void(0)" data-toggle="modal" data-target="#modal-alert-add-cart" onclick="addToCart(<?php echo $post_id; ?>);" ><i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;Thêm vào giỏ</a>									
-									</div>
-								</div>								
-							</div>									
-							<div class="box-product-title"><a href="<?php echo $permalink; ?>"><?php echo $title; ?></a></div>
-							<div class="box-product-star">								
-									<i class="fa fa-star" aria-hidden="true"></i>
-									<i class="fa fa-star" aria-hidden="true"></i>
-									<i class="fa fa-star" aria-hidden="true"></i>
-									<i class="fa fa-star" aria-hidden="true"></i>
-									<i class="fa fa-star" aria-hidden="true"></i>								
-							</div>
-							<div class="box-product-general-price margin-top-5">
-								<center><?php echo $str_price; ?></center>								                    
-							</div>							                     
-						</div>           
+						<div class="col-xs-4"><center><a href="<?php echo $permalink; ?>"><img src="<?php echo $featureImg; ?>" /></a></center></div>
+						<div class="col-xs-8">
+							<div class="margin-top-15"><a href="<?php echo $permalink; ?>"><?php echo $title; ?></a></div>
+							<div><?php echo $str_price; ?></div>
+						</div>
+						<div class="clr"></div>
 					</div>					             				
 					<?php					
 				}
 				wp_reset_postdata();  
 			}	
-			?>
-			</div>
-			<?php	
-			break;	
+			break;			
 		}
 	}
 }	

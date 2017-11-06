@@ -83,7 +83,7 @@ table td{padding-left:10px;padding-bottom:10px;}
     margin: 0.5em 0 0.5em 1em;
 }
 .form-control{display:block;width:100%;height:34px;padding:6px 12px;font-size:14px;line-height:1.42857143;color:#555;background-color:#fff;background-image:none;border:1px solid #ccc;border-radius:4px;-webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,.075);box-shadow:inset 0 1px 1px rgba(0,0,0,.075);-webkit-transition:border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;-o-transition:border-color ease-in-out .15s,box-shadow ease-in-out .15s;transition:border-color ease-in-out .15s,box-shadow ease-in-out .15s;border-radius:0;box-shadow:none;border-color:#d2d6de;}
-.readmore{font-weight:bold;font-style:italic;color:#FC6500;float:right;}
+.readmore{font-weight:bold;font-style:italic;color:#00a651;float:right;}
 .readmore:hover{text-decoration:underline;}
 .fancybox-custom .fancybox-skin{box-shadow:0 0 50px #222;}
 .btn{background:#00a651;border-color:#00a651;}
@@ -517,13 +517,36 @@ div.mail-subscribe{
 }
 
 footer.footer{
-    background: #333;
+    background: #000000;
+    font-family: 'baomoi';
+    color: #ffffff
 }
 h3.footer-title{
     text-transform: uppercase;
     font-size: 18px;
     font-family: 'baomoi';
-    color: #ffffff
+    
+}
+div.icon-social > a{
+        padding: 10px 10px 10px 0px;
+    display: inline-block;
+    color: #ffffff;
+}
+h3.we-are-here{
+        border-bottom: 1px solid rgb(225, 225, 225);
+        color: rgb(234, 234, 234);
+        text-transform: uppercase;
+        
+            font-size: 13px;
+}
+h3.we-are-here-subscribe-mail{
+        border-bottom: 1px solid rgb(225, 225, 225);
+        color: rgb(234, 234, 234);
+        text-transform: uppercase;
+        
+            font-size: 20px;
+            display: inline-block;
+                border-bottom: 1px solid rgb(225, 225, 225);
 }
 div.bottom-content{
     margin-top: 15px;
@@ -595,7 +618,7 @@ h3.page-title-left {
     text-transform: uppercase;
     font-weight: bold;
     font-size: 14px;
-    background:#4CA7D6;
+    background:#00a651;
     color: #ffffff;
     padding: 15px 10px;
 }
@@ -808,7 +831,7 @@ div#cart-info > div {
     line-height: 21px;
 }
 .re-ship-phone .item .des span {
-    color: #f48549;
+    color: rgb(0, 166, 81);
 }
 .hotline-bg{
     background: #ffffff;
@@ -871,7 +894,7 @@ span.price-regular{
     color: #888;            
 }
 span.price-sale{
-    color: #f48549;
+    color: rgb(0, 166, 81);
     font-size: 16px;
     font-weight: bold;    
 }
@@ -922,15 +945,15 @@ div.comment{
     text-align: center;
 }
 div.hot-news-title{
-    bottom: 0;
-    left: 0;
-    text-align: center;
-    background: url(../images/bg-them-vao-gio-hang.png);
-    width: 100%;
-    position: absolute;
+    text-transform: uppercase;
+    
 }
-div.hot-news-title > a{
-    color: #ffffff
+div.hot-news-title,div.hot-news-excerpt{
+    font-family: 'baomoi';
+    text-align: justify;
+}
+div.hot-news-excerpt{
+    font-style: italic;
 }
 div.map{
         background: #00a651;
@@ -1031,6 +1054,10 @@ ul.bottommenu > li > a{
     padding: 0px 10px;
     display: block;
 }
+ul.footermenu{
+        list-style: none;
+    margin-top: 5px;
+}
 ul.footermenu > li {
     margin-left: 0
 }
@@ -1114,6 +1141,15 @@ ul.dienthoaitabletmenu > li > a{
     display: block;
     margin:14px 20px 13px 20px;
 } 
+div.goi-y{
+    background: #ffffff;
+    font-family: 'baomoi';
+}
+div.goi-y > h6{
+        text-transform: uppercase;
+    padding: 10px 0px 10px 15px;
+    border-bottom: 1px solid rgb(221, 221, 221);
+}
 .header-title h2:after {
     content: " ";
     display: block;
@@ -1129,6 +1165,26 @@ ul.dienthoaitabletmenu > li > a{
     position: absolute;
     top: 0;
     right: -15px;
+}
+.box-register-email input {
+    width: 100%;
+    border:1px solid rgb(146, 139, 139);
+    padding: 8px 10px;
+    background: transparent;
+        color: rgb(154, 155, 158);
+}
+.box-register-email button {
+    position: absolute;
+        background: rgb(154, 155, 158);
+    box-shadow: none;
+    border-color: rgb(146, 139, 139) rgb(146, 139, 139) rgb(146, 139, 139);
+    right: 0;
+    top: 0;
+    color: #fff;
+    padding: 8px 8px;
+}
+div.box-subscribe{
+    width: 270px
 }
 @media (max-width: 1199px){
     div.phone-number > div{
