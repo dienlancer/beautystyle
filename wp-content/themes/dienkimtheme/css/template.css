@@ -1078,8 +1078,8 @@ div.warasocial{
 }
 div.goi-y-tu-khoa{
         position: relative;
-    margin-top: 50px;
     font-style: italic;
+    top: 46px;
 }
 div.box > div.icon {
     background: #00a651;

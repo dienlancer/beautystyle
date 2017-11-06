@@ -126,7 +126,7 @@ foreach($arrCart as $cart){
                 <div class="goi-y-tu-khoa"><span><font color="#00a651">Gợi ý từ khóa:</font></span> Thời trang nam, Thời trang nữ, Balo, túi xách, Mè và bé...</div>
             </div>
             <div class="col-lg-3 no-padding">
-                <div class="col-md-6">
+                <div class="col-lg-6">
                     <div class="box">
                         <div class="icon">
                             <i class="fa fa-user" aria-hidden="true"></i>
@@ -139,7 +139,7 @@ foreach($arrCart as $cart){
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-lg-6">
                     <div class="box">
                         <div class="icon">
                             <i class="fa fa-shopping-bag" aria-hidden="true"></i>
@@ -150,6 +150,7 @@ foreach($arrCart as $cart){
                         </div>
                     </div>
                 </div>
+                <div class="clr"></div>
             </div>      
             <div class="clr"></div>      
         </div>      

@@ -379,7 +379,20 @@ function header_script_code(){
             classname: "ddsmoothmenu",
             contentsource: "markup" 
         });       
-    </script>';
+    </script>
+	<script language="javascript" type="text/javascript">
+     jQuery(document).ready(function(){        
+        jQuery(window).bind("scroll", function() {                        
+         if (jQuery(window).scrollTop() > 142) {
+           jQuery("div.menu").addClass("fixed");
+            }
+           else {
+               jQuery("div.menu").removeClass("fixed");
+           }
+   });
+    });
+</script>
+    ';
     echo $strScript;
 }
 function footer_script_code(){
