@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th10 06, 2017 lúc 11:22 AM
+-- Thời gian đã tạo: Th10 06, 2017 lúc 12:55 PM
 -- Phiên bản máy phục vụ: 10.1.22-MariaDB
 -- Phiên bản PHP: 7.1.4
 
@@ -391,7 +391,7 @@ INSERT INTO `mp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (72, 24, '_menu_item_classes', 'a:1:{i:0;s:0:\"\";}'),
 (73, 24, '_menu_item_xfn', ''),
 (74, 24, '_menu_item_url', ''),
-(283, 15, '_zendvn_sp_page_count_view_post', '631'),
+(283, 15, '_zendvn_sp_page_count_view_post', '645'),
 (284, 63, '_menu_item_type', 'post_type'),
 (285, 63, '_menu_item_menu_item_parent', '0'),
 (286, 63, '_menu_item_object_id', '17'),
@@ -757,10 +757,10 @@ INSERT INTO `mp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (1441, 307, '_menu_item_classes', 'a:1:{i:0;s:0:\"\";}'),
 (1442, 307, '_menu_item_xfn', ''),
 (1443, 307, '_menu_item_url', ''),
-(1445, 298, '_zendvn_sp_post_count_view_post', '50'),
-(1446, 296, '_zendvn_sp_post_count_view_post', '8'),
+(1445, 298, '_zendvn_sp_post_count_view_post', '57'),
+(1446, 296, '_zendvn_sp_post_count_view_post', '10'),
 (1462, 294, '_wp_old_slug', 'chu-tich-pnc-nhan-thuong-5-ty-dong-khi-nop-don-tu-nhiem'),
-(1463, 294, '_zendvn_sp_post_count_view_post', '7'),
+(1463, 294, '_zendvn_sp_post_count_view_post', '8'),
 (1466, 292, '_wp_old_slug', 'nhieu-quan-bar-o-sai-gon-bi-canh-sat-dot-kich-2'),
 (1469, 288, '_wp_old_slug', 'ong-chu-khaisilk-dong-toan-bo-cua-hang-thu-hoi-san-pham'),
 (1474, 173, '_wp_old_slug', 'tet-doan-ngo-va-tat-ca-nhung-gi-ban-can-biet'),
@@ -826,7 +826,7 @@ INSERT INTO `mp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (1557, 332, '_menu_item_classes', 'a:1:{i:0;s:0:\"\";}'),
 (1558, 332, '_menu_item_xfn', ''),
 (1559, 332, '_menu_item_url', ''),
-(1570, 327, '_zendvn_sp_zaproduct_count_view_post', '30'),
+(1570, 327, '_zendvn_sp_zaproduct_count_view_post', '31'),
 (1571, 107, '_zendvn_sp_zaproduct_count_view_post', '692'),
 (1590, 343, '_edit_last', '1'),
 (1591, 343, '_edit_lock', '1509329731:1'),
@@ -1869,7 +1869,9 @@ INSERT INTO `mp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (3411, 296, '_wp_old_slug', 'psg-di-tiep-trong-ngay-hau-ve-trai-lap-hattrick'),
 (3414, 294, '_wp_old_slug', 'cuu-hlv-the-luc-man-utd-he-lo-nhung-bai-tap-ki-la-cua-ronaldo'),
 (3417, 656, '_wp_attached_file', 'payment.png'),
-(3418, 656, '_wp_attachment_metadata', 'a:5:{s:5:\"width\";i:170;s:6:\"height\";i:30;s:4:\"file\";s:11:\"payment.png\";s:5:\"sizes\";a:0:{}s:10:\"image_meta\";a:12:{s:8:\"aperture\";s:1:\"0\";s:6:\"credit\";s:0:\"\";s:6:\"camera\";s:0:\"\";s:7:\"caption\";s:0:\"\";s:17:\"created_timestamp\";s:1:\"0\";s:9:\"copyright\";s:0:\"\";s:12:\"focal_length\";s:1:\"0\";s:3:\"iso\";s:1:\"0\";s:13:\"shutter_speed\";s:1:\"0\";s:5:\"title\";s:0:\"\";s:11:\"orientation\";s:1:\"0\";s:8:\"keywords\";a:0:{}}}');
+(3418, 656, '_wp_attachment_metadata', 'a:5:{s:5:\"width\";i:170;s:6:\"height\";i:30;s:4:\"file\";s:11:\"payment.png\";s:5:\"sizes\";a:0:{}s:10:\"image_meta\";a:12:{s:8:\"aperture\";s:1:\"0\";s:6:\"credit\";s:0:\"\";s:6:\"camera\";s:0:\"\";s:7:\"caption\";s:0:\"\";s:17:\"created_timestamp\";s:1:\"0\";s:9:\"copyright\";s:0:\"\";s:12:\"focal_length\";s:1:\"0\";s:3:\"iso\";s:1:\"0\";s:13:\"shutter_speed\";s:1:\"0\";s:5:\"title\";s:0:\"\";s:11:\"orientation\";s:1:\"0\";s:8:\"keywords\";a:0:{}}}'),
+(3419, 326, '_zendvn_sp_zaproduct_count_view_post', '1'),
+(3420, 535, '_zendvn_sp_page_count_view_post', '1');
 
 -- --------------------------------------------------------
 
@@ -2946,7 +2948,7 @@ ALTER TABLE `mp_options`
 -- AUTO_INCREMENT cho bảng `mp_postmeta`
 --
 ALTER TABLE `mp_postmeta`
-  MODIFY `meta_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3419;
+  MODIFY `meta_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3421;
 --
 -- AUTO_INCREMENT cho bảng `mp_posts`
 --
